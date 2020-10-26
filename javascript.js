@@ -43,3 +43,7 @@ function round(playerSelection, computerSelection) {
 
     }
 }
+
+function game() {
+    
+}
