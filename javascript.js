@@ -15,35 +15,40 @@ function round(playerSelection, computerSelection) {
         case "rock":
             switch (playerSelectionModded) {
                case "paper" :
-                return "You won the round! Paper beats Rock"
+                return "W"
                case "scissors" :
-                return "You lost the round! Rock beats Scissors"   
+                return "L"   
                default :
-                return "No one wins the round."          
+                return "E"          
             }
         case "paper":
             switch (playerSelectionModded) {
                 case "scissors" :
-                 return "You won the round! Scissors beats Paper"
+                 return "W"
                 case "rock" :
-                 return "You lost the round! Paper beats Rock"   
+                 return "L"   
                 default :
-                 return "No one wins the round."          
+                 return "E"          
              }
             
         case "scissors":
             switch (playerSelectionModded) {
                 case "rock" :
-                 return "You won the round! Rock beats scissors"
+                 return "W"
                 case "paper" :
-                 return "You lost the round! Scissors beats Paper"   
+                 return "L"   
                 default :
-                 return "No one wins the round."          
+                 return "E"          
              }
 
     }
 }
 
 function game() {
-    
+    let roundCount = 0
+    let wincount
+    while(true) {
+
+    }
 }
+game()
