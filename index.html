@@ -14,18 +14,19 @@
     <div class="jumbotron"><img style="width: 96px;" src="assets/img/people-playing-paper-rock-scissors-royalty-free-illustration-1583269312.jpg">
         <h1>Rock Paper Scissors</h1>
         <p>Welcome to one of the most famous games on the planet!</p>
-        <p><a class="btn btn-primary" role="button">Start playing</a></p>
+        <button id="startButton" class="btn btn-primary" type="button">Start Playing</button>
     </div>
     <p>Please select :</p>
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Rock</button></div>
-                <div class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Paper</button></div>
-                <div class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Scissors</button></div>
+                <div id ="rock" class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Rock</button></div>
+                <div id="paper" class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Paper</button></div>
+                <div id="scissors" class="col-md-4"><button class="btn btn-primary" type="button" style="margin: 5px;width: 100%;">Scissors</button></div>
             </div>
         </div>
     </div>
+    <div id="score"></div>
     <div style="margin-top: 62px;"><button class="btn btn-primary" type="button" style="margin-left: 50px;">Next round</button></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

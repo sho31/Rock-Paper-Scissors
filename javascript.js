@@ -43,12 +43,26 @@ function round(playerSelection, computerSelection) {
 
     }
 }
-
+let card = document.createElement('div')
+let test = document.createElement('p')
+test.textContent = "je suis lol"
+card.setAttribute("class", "card-body")
+card.innerHTML='<h4 class=\"card-title\" style=\"font-size: 42px;\">Score</h4>\n    <p class=\"card-text\" style=\"font-size: 37px;\"><span id="scoreMe" style=\"color: rgb(92,181,50);\">0</span><span> - </span><span id="scoreOpp"style=\"color: rgb(187,79,86);\">0</span></p>'
+const score = document.querySelector("#score")
 function game() {
-    let roundCount = 0
-    let wincount
-    while(true) {
+    let roundCount = 1;
+    let wincount = 0;
+    score.appendChild(card)
+    const scoreMe = document.querySelector("#scoreMe");
+    const scoreOpp = document.querySelector("#scoreOpp")
+    const roundp = document.createElement("p");
+    roundp.textContent = "Round " + roundCount
+    card.appendChild(roundp)
+    while(roundCount <5) {
+            
 
     }
 }
+const startButton = document.querySelector("#startButton")
+startButton.addEventListener('click', game)
 game()
