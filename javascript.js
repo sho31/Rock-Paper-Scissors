@@ -22,8 +22,24 @@ function round(playerSelection, computerSelection) {
                 return "No one wins the round."          
             }
         case "paper":
+            switch (playerSelectionModded) {
+                case "scissors" :
+                 return "You won the round! Scissors beats Paper"
+                case "rock" :
+                 return "You lost the round! Paper beats Rock"   
+                default :
+                 return "No one wins the round."          
+             }
+            
         case "scissors":
-
+            switch (playerSelectionModded) {
+                case "rock" :
+                 return "You won the round! Rock beats scissors"
+                case "paper" :
+                 return "You lost the round! Scissors beats Paper"   
+                default :
+                 return "No one wins the round."          
+             }
 
     }
 }
