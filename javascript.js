@@ -1,3 +1,5 @@
+const gamePanel = document.querySelector("#game");
+gamePanel.style.display = "none"
 function computerPlay() {
     let randomNumber = Math.floor(Math.random()*3);
     switch (randomNumber) {
@@ -54,19 +56,44 @@ const bp = document.querySelector("paper")
 const bs = document.querySelector("scissors")
 
 function game() {
+    gamePanel.style.display='block'
     let roundCount = 1;
     let wincount = 0;
+    let loseCount = 0;
     score.appendChild(card)
     const scoreMe = document.querySelector("#scoreMe");
     const scoreOpp = document.querySelector("#scoreOpp")
     const roundp = document.createElement("p");
     roundp.textContent = "Round " + roundCount
     card.appendChild(roundp)
-    const buttons = document.querySelectorAll('buttons');
-    alert(buttons);
-    buttons.forEach()
+    const buttons = document.querySelectorAll('#rock, #paper, #scissors');
+    buttons.forEach( button => {
+        button.addEventListener('click',() => {
+            let result = round(button.id, computerPlay());
+            console.log(`new round \n ${result}`)
+            switch (result) {
+                case "W" : 
+                    wincount++;
+                    roundCount++;
+                    roundp.textContent = "Round " + roundCount
+                    scoreMe.textContent = wincount;
+                    break;
+                case "L" :
+                    loseCount++;
+                    roundCount++;
+                    roundp.textContent = "Round " + roundCount
+                    scoreOpp.textContent = loseCount;
+                    break;
+                case "E" :
+                    console.log("You both played " + button.id + "! Play again")    
+                    break;
+
+            }
+        })
+    }
+
+    )
 
 }
 const startButton = document.querySelector("#startButton")
 startButton.addEventListener('click', game)
-game()
